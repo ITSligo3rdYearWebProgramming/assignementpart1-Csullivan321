@@ -104,7 +104,6 @@ app.delete('/deletename/:name', (req, res) =>{
       // }
  //  })
 
-
     const dname =  user ({name: req.params.name});
 
     dname.delete()
