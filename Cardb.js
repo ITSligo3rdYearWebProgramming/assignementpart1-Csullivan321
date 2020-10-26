@@ -52,6 +52,30 @@ app.get('/addmodel/:model', (req, res) => {
 
 });
 
+// add year to the database
+app.get('/addyear/:year', (req, res) => {
+    
+    const ayear = new car({year: req.params.year});
+
+    ayear.save()
+    .then((result) => res.send(`${req.params.year} was saved to the database`))
+    .catch((err) =>
+    console.err(err));
+
+});
+
+app.get('/addfuel/:fuel', (req, res) => {
+    
+    const afuel = new car({fuel: req.params.fuel});
+
+    afuel.save()
+    .then((result) => res.send(`${req.params.fuel} was saved to the database`))
+    .catch((err) =>
+    console.err(err));
+
+});
+
+
 
 app.get('/deleteCar/:make', (req, res) => {
     var type = req.params.make;
