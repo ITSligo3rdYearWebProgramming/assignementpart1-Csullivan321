@@ -92,6 +92,29 @@ app.get('/deleteCar/:make', (req, res) => {
     });
 })
 
+app.delete('/deletemake/:make', (req, res) =>{
+
+    //var make = req.params("make");
+ 
+    //user.remove({
+        //_id: make
+    //}, function(err){
+        //if (err){
+            //console.log(err)
+       // }
+        //else {
+            //res.send("Removed from database")
+       // }
+  //  })
+ 
+ 
+     const dmake =  user ({make: req.params.make});
+ 
+     dmake.delete()
+     .then((result) => res.send(`${req.params.make} was deleted from the database`))
+     .catch((err) => 
+     console.err(err));
+ })
 
 app.listen(port, () => console.log(`Example app listening on 
   : ${port}!`))

@@ -89,6 +89,30 @@ app.get('/addPhone/:phone', (req, res) => {
 
 });
 
+app.delete('/deletename/:name', (req, res) =>{
+
+   //var name = req.params("name");
+
+   //user.remove({
+       //_id: name
+   //}, function(err){
+       //if (err){
+           //console.log(err)
+      // }
+       //else {
+           //res.send("Removed from database")
+      // }
+ //  })
+
+
+    const dname =  user ({name: req.params.name});
+
+    dname.delete()
+    .then((result) => res.send(`${req.params.name} was deleted from the database`))
+    .catch((err) => 
+    console.err(err));
+})
+
 
 
 
