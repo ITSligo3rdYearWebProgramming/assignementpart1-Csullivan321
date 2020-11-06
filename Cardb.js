@@ -29,7 +29,7 @@ const carSchema = new mongoose.Schema({
     id: Number
     
 });
-
+//comment to push 
 const car = mongoose.model('Car', carSchema);
 
 //add make to database
