@@ -1,9 +1,6 @@
 import mongoose from 'mongoose';
 import express from 'express';
-import readallCar from './routes/car'
-//import car from '../Assignment 1/models/mycarmodel';
-
-import Car from "./models/mycarmodel"
+import car from "./routes/car";
 
 const app = express();
 
@@ -29,7 +26,7 @@ db.once('open', () => {
   console.log('Database connected')
 });
 
-app.use('/',readallCar)
+app.use('/cars',car)
 //var multer = require('./routes/car');
 //var upolad = multer({dest: './car'})
 

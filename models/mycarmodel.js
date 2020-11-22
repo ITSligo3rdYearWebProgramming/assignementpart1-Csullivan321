@@ -8,6 +8,6 @@ const carSchema = new mongoose.Schema({
     id:{type:Number, requiered: true}
 });
 
-let Car = mongoose.model('Cars', carSchema);
+let Car = mongoose.model('Car', carSchema);
 
 export {Car}
