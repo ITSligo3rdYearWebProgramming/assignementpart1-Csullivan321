@@ -13,6 +13,9 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors());
+
 // commits
 
 mongoose.connect('mongodb://localhost:27017/CarDatabase', {
