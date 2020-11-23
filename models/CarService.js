@@ -50,4 +50,8 @@ function deleteCar(req, res){
     
 }
 
+
+
+
+
 export default {readallCar, readCar, addCar, deleteCar }

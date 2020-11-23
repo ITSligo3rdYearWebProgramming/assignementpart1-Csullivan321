@@ -10,9 +10,9 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req,res) => {
-    //let id = req.params.id;
-    //const car = db.readCar;
-    //res.json(car);
+    // let id = req.params.id;
+    // const car = db.readCar;
+    // res.json(car);
     db.readCar(req,res);
 })
 
